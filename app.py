@@ -6,6 +6,7 @@ def home():
     weather_data = None
     if request.method == 'POST':
         city = request.form['city']
+        print(city)
         api_key = "5cf9ab1afaee86eab7f55f71200c157c"
         url =f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
         response=requests.get(url)
@@ -14,8 +15,10 @@ def home():
             weather_data ={'city':data['name'],
                            'temperature': data['main']['temp'],
                            'description': data['weather'][0]['description'],
-                           'icon': data['weather'][0]['icon']
-            }
+                           'icon': data['weather'][0]['icon'],
+
+                         }
+            print(weater_data)
         else:
             weather_data = {'error': 'City not found!'}
     
