@@ -16,13 +16,16 @@ def home():
                            'temperature': data['main']['temp'],
                            'description': data['weather'][0]['description'],
                            'icon': data['weather'][0]['icon'],
+            }
 
-                         }
-            print(weater_data)
+  
+            
+            
+            print(weather_data)
         else:
             weather_data = {'error': 'City not found!'}
     
-    return render_template('index.html', weather=weather_data)
+   return render_template('index.html', weather=weather_data)
 
 if __name__ == '_main_':
     app.run(debug=True)

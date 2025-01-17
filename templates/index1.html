@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>City Input</title>
+            </head>
+            <body>
+                <h1>Enter Your City</h1>
+                    <form method="POST">
+                            <label for="city">City:</label>
+                                    <input type="text" id="city" name="city" required>
+                                            <button type="submit">Submit</button>
+                                                </form>
+
+                                                    {% if city %}
+                                                            <h2>City stored in variable: {{ city }}</h2>
+                                                                {% endif %}
+                                                                </body>
+                                                                </html>
